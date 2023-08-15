@@ -2,7 +2,7 @@
 
 This is the second part of the series - please refer to the first part [here](https://nisarumar.github.io/uefi/2023/06/11/Hii_DB_Pt1/). The first part introduces Internal Forms Representation (IFR) and an overview of how a driver might utilize the UEFI HII framework to publish its user-configurable items. The second part is complementary to the later half of the first part.
 
-UEFI EDK2 contains VfrCompiler utility, which compiles the human readable VFR format into IFR opcodes. In this entry, we focus on decompiling IFR opcodes to human-readable format and retrieving associated UEFI variables with each configurable item in the BIOS menu. It is beneficial in scenarios where either the setup utility of the BIOS is not present or minimum user interaction is required to modify certain BIOS menu items.
+UEFI EDK2 contains VfrCompiler [utility](https://github.com/tianocore/edk2/blob/master/BaseTools/UserManuals/VfrCompiler_Utility_Man_Page.rtf), which compiles the human readable VFR format into IFR opcodes. In this entry, we focus on decompiling IFR opcodes to human-readable format and retrieving associated UEFI variables with each configurable item in the BIOS menu. It is beneficial in scenarios where either the setup utility of the BIOS is not present or minimum user interaction is required to modify certain BIOS menu items.
 
 In this entry, the major focus will be on some basics of the FORM package. Furthermore, I will provide an UEFI shell application to retrieve and parse IFR forms and disassemble them in a human-readable format along with associated UEFI variables and corresponding varstores. I will also provide a json-c port for convenient representation of the data.
 
